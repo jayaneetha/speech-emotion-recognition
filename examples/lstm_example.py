@@ -47,7 +47,7 @@ def lstm_saved_model():
     print("Loading")
     model.restore_model()
     # filename = '../dataset/03a01Wa.wav'
-    filename = '../dataset/angry.wav'
+    filename = '../dataset/sad.wav'
     print("\nPredicted: {}\nActual: {}".format(
         get_class_name(
             model.predict_one(get_feature_vector_from_mfcc(filename, flatten=to_flatten))),
