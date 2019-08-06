@@ -80,6 +80,7 @@ class DNN(Model):
         for i in range(n_epochs):
             # Shuffle the data for each epoch in unison inspired
             # from https://stackoverflow.com/a/4602224
+            print("Training {}/{}".format(i, n_epochs))
             p = np.random.permutation(len(x_train))
             x_train = x_train[p]
             y_train = y_train[p]

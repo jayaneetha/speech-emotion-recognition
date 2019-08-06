@@ -150,8 +150,9 @@ class Model(object):
                                     containing the labels for test samples.
         """
         predictions = self.predict(x_test)
-        print(y_test)
-        print(predictions)
+        print("Actual\tPredicted")
+        for i in range(len(predictions)):
+            print("\t{}\t{}".format(y_test[i], predictions[i]))
         print('Accuracy:%.3f\n' % accuracy_score(y_pred=predictions,
                                                  y_true=y_test))
         print('Confusion matrix:', confusion_matrix(y_pred=predictions,
